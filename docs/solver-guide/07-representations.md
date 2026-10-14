@@ -23,12 +23,14 @@ Featherstone 在 Newton Physics 表里是实现名。固定实现用关节广义
 
 ## PBD / XPBD：预测后修正约束
 
-位置约束方法先得到预测位置，再迭代修正。为理解 XPBD 的柔顺和乘子历史，考虑一个标量等式约束 $C(x)=0$，逆质量 $w_i$，步长 $h$，柔顺参数 $\alpha$，令 $\tilde\alpha=\alpha/h^2$：
+位置约束方法先得到预测位置，再迭代修正。为理解 XPBD 的柔顺和乘子历史，考虑一个标量等式约束 $`C(x)=0`$，逆质量 $`w_i`$，步长 $`h`$，柔顺参数 $`\alpha`$，令 $`\tilde\alpha=\alpha/h^2`$：
 
-$$\Delta\lambda=\frac{-C(x)-\tilde\alpha\lambda}{\sum_i w_i\|\nabla_i C\|^2+\tilde\alpha},\qquad
-\Delta x_i=w_i\nabla_i C\,\Delta\lambda.$$
+```math
+\Delta\lambda=\frac{-C(x)-\tilde\alpha\lambda}{\sum_i w_i\|\nabla_i C\|^2+\tilde\alpha},\qquad
+\Delta x_i=w_i\nabla_i C\,\Delta\lambda.
+```
 
-公式背景见 Macklin、Müller 与 Chentanez（2016）的 [XPBD 原论文](https://matthias-research.github.io/pages/publications/XPBD.pdf)式 17–18。这是一个基本 XPBD 解释式，假设约束与参数尺度一致，省略松弛、不等式投影和不同类型约束的实现细节。若 $C$ 是长度，$\alpha$ 可按 m/N 理解，$\tilde\alpha$ 为 kg⁻¹；角度、体积或归一化约束必须另核对量纲。此长度约束的 $\lambda$ 单位为 N·s²，不是接触速度问题中单位 N·s 的冲量。乘子如何跨迭代/跨步保存也属于实现。
+公式背景见 Macklin、Müller 与 Chentanez（2016）的 [XPBD 原论文](https://matthias-research.github.io/pages/publications/XPBD.pdf)式 17–18。这是一个基本 XPBD 解释式，假设约束与参数尺度一致，省略松弛、不等式投影和不同类型约束的实现细节。若 $`C`$ 是长度，$`\alpha`$ 可按 m/N 理解，$`\tilde\alpha`$ 为 kg⁻¹；角度、体积或归一化约束必须另核对量纲。此长度约束的 $`\lambda`$ 单位为 N·s²，不是接触速度问题中单位 N·s 的冲量。乘子如何跨迭代/跨步保存也属于实现。
 
 **不能反向给所有 PBD 实现补上这条公式。** Genesis 固定 PBD stretch 实现包含 compliance/h² 与 relaxation，但该局部公式没有保存同样的 XPBD 乘子历史；Newton 的刚体 XPBD 接触与关节也需分别追踪。[Genesis 原生路径][genesis]、[Newton 原生路径][newton]；教材第 32 章提供共同背景。
 
@@ -55,8 +57,8 @@ MPM 的一条示意数据流是“粒子到网格 → 网格动力学与边界 �
 如果任务需要布料逐节点外力，第一步是确认该原生路径能表达这些输入；若只能强制写位置，任务物理已经改变。若模型不能表达所需行为，提高 solver 预算不能补齐能力。
 
 1. **相同三角网格与相同 Young's modulus 能证明布料模型等价吗？** 不能；厚度、离散本构、弯曲、质量、边界及接触都要核对。
-2. **XPBD 柔顺参数固定，步长减半，$\tilde\alpha$ 如何变化？** 变为四倍；这说明公式有步长缩放，不等于无需检查离散误差或具体实现。
-3. **VBD compliant 的刚度 $k$ 有限，提高 ALM metric 能否得到无限刚性材料？** 不能；固定 Newton 解释式 $k_{eff}=k\rho/(k+\rho)$ 的极限仍为 $k$，见原生导读。
+2. **XPBD 柔顺参数固定，步长减半，$`\tilde\alpha`$ 如何变化？** 变为四倍；这说明公式有步长缩放，不等于无需检查离散误差或具体实现。
+3. **VBD compliant 的刚度 $`k`$ 有限，提高 ALM metric 能否得到无限刚性材料？** 不能；固定 Newton 解释式 $`k_{eff}=k\rho/(k+\rho)`$ 的极限仍为 $`k`$，见原生导读。
 
 ## English summary
 
