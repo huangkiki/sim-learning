@@ -1,0 +1,119 @@
+{
+  "title": "Physics-Based Simulation",
+  "repository": "https://github.com/phys-sim-book/mdbook-src",
+  "commit": "18c637eb6a7016814ac2a04e98798be0ed9b82b1",
+  "checked_on": "2026-10-14",
+  "online_preface_version": "1.0.3 (2026/3)",
+  "license": "CC BY-NC-SA 4.0",
+  "scope": "Book identity, 37-chapter order, selected chapter overviews, attribution and route links. This is not a complete book/source-code audit or runtime validation.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob": "cbe5ad1670406e4402217edfb82d2c56af7e8631",
+      "sha256": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/LICENSE"
+    },
+    {
+      "path": "src/preface.md",
+      "git_blob": "d888639aadc5a782c7d812cddbe125765510022f",
+      "sha256": "8a2476b04b533b8f813b211a43d1e1ce40d29c88a51b723c264f66b9f84d6ce8",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/preface.md"
+    },
+    {
+      "path": "src/SUMMARY.md",
+      "git_blob": "00f2529367b165e28f822c268387b89c01b2d047",
+      "sha256": "4be13d31567e1681415e4e2a0368f6836721e1f2c708e29db48ecd4dfc4689a6",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/SUMMARY.md"
+    },
+    {
+      "path": "src/simulation-with-optimization/discrete-space-and-time/discrete_space_time.md",
+      "git_blob": "f5f394bd9f684934e355381a701d345edc955d9d",
+      "sha256": "68bb637cc9af2092c3f4e7716cf23c20ddf645b81f1132ab23fc83be482529b3",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/simulation-with-optimization/discrete-space-and-time/discrete_space_time.md"
+    },
+    {
+      "path": "src/simulation-with-optimization/optimization-framework/opt_framework.md",
+      "git_blob": "d171f4b4ec3e44a6dc0916abde214ef1b456139a",
+      "sha256": "6a420228e27ed1959089e63f8506662df8cf677b58bbe13de25a1e212e6229a4",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/simulation-with-optimization/optimization-framework/opt_framework.md"
+    },
+    {
+      "path": "src/simulation-with-optimization/projected-newton/projected_Newton.md",
+      "git_blob": "faa633be6811d723fee49cc794799f45ac38ad28",
+      "sha256": "e6bbe2ffb2ca64a3dcd9bc9670c9d803e40add0f06664cf95ca0a568449c9138",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/simulation-with-optimization/projected-newton/projected_Newton.md"
+    },
+    {
+      "path": "src/simulation-with-optimization/case-study-2d-mass-spring/2d_mass_spring.md",
+      "git_blob": "2db766544c3f3e50b4b1669f6406359c86d00839",
+      "sha256": "5b573b27513ea2611a8e2d396c1e40c0db62f3e161b74ce994674e2228cbd179",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/simulation-with-optimization/case-study-2d-mass-spring/2d_mass_spring.md"
+    },
+    {
+      "path": "src/special-topics/linear-system/linear_sys.md",
+      "git_blob": "936d31153155786badab548b429e711983c3e283",
+      "sha256": "04731f3b46dba9f1b638a45af9b84b66dc60d8941f7d093f018b8e1ead694475",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/special-topics/linear-system/linear_sys.md"
+    },
+    {
+      "path": "src/boundary-treatments/distance-barrier-for-nonpenetration/dist_barrier.md",
+      "git_blob": "9fe994fde74e21860e6338b55d35a37fa20f1f6d",
+      "sha256": "f5f13ac60fdbd1d8f66d753fd0249ed12f731bb0ef07d5b1a0d63c8ba053e7fe",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/boundary-treatments/distance-barrier-for-nonpenetration/dist_barrier.md"
+    },
+    {
+      "path": "src/boundary-treatments/filter-line-search/filter_line_search.md",
+      "git_blob": "4d192e0796d03d542767ad68bc21793c76ecda36",
+      "sha256": "0a589a990f9c435d5cceadc10d59e65ffd1202661ac8f6b37688cb83b4437d16",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/boundary-treatments/filter-line-search/filter_line_search.md"
+    },
+    {
+      "path": "src/boundary-treatments/frictional-contact/friction.md",
+      "git_blob": "472370da9f6b53f1816298391b993da5cd3ca760",
+      "sha256": "0a0446b8860c26387f51e936c7b425bd221ad0e080cd826a3c70237599d748be",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/boundary-treatments/frictional-contact/friction.md"
+    },
+    {
+      "path": "src/boundary-treatments/case-study-square-on-slope/square_on_slope.md",
+      "git_blob": "4d84b639db783a4f36a71412ee2a7caca97ef835",
+      "sha256": "43b541250bfe49251d917bc8ec5724066a4345755b3508d582b45581efe30b12",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/boundary-treatments/case-study-square-on-slope/square_on_slope.md"
+    },
+    {
+      "path": "src/hyperelasticity/kinematics-theory/kinematics.md",
+      "git_blob": "70b88007a1a7d9a3a5f8a7062cd975ac37d9ad8c",
+      "sha256": "4f53e18ff6c39b55413630578c7b9344bc0289ea8f4b497816af775e2872f398",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/hyperelasticity/kinematics-theory/kinematics.md"
+    },
+    {
+      "path": "src/spatial-reductions/rigid-body-simulation/rigid_body_sim.md",
+      "git_blob": "08e7b698688e4713affb3eca79edb4e3a5bb2f1a",
+      "sha256": "c52a845462837f83ce93820445d38f99712d29c16c72db5bc992753907669ab1",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/spatial-reductions/rigid-body-simulation/rigid_body_sim.md"
+    },
+    {
+      "path": "src/material-point-method/spatial-and-temporal-discretization/mpm_disc.md",
+      "git_blob": "e445f89d4f2b28a012d7f98ced3d9d86e2a0f386",
+      "sha256": "59877932580ece39aeef5d18b1c5f33b8caf990e393cedc858674d3a0893c40b",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/material-point-method/spatial-and-temporal-discretization/mpm_disc.md"
+    },
+    {
+      "path": "src/position-based-simulations/position-based-dynamics-pbd/position_based_dynamics.md",
+      "git_blob": "10725f640e7082c67e5c375265455571d0d2946a",
+      "sha256": "eb8915e04d55049ee8ebec6dd3c847ceb6eac8700bcff6fd54686764f4b32e09",
+      "url": "https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/src/position-based-simulations/position-based-dynamics-pbd/position_based_dynamics.md"
+    }
+  ],
+  "upstream_code_submodules": [
+    {
+      "path": "src/solid-sim-tutorial",
+      "commit": "f463ddc4cb517001721c1d6e471437106afce67a",
+      "status": "recorded from the book tree; not cloned or executed"
+    },
+    {
+      "path": "src/solid-sim-tutorial-gpu",
+      "commit": "23f6860021559e6c56202e2656881ca073e77f36",
+      "status": "recorded from the book tree; not cloned or executed"
+    }
+  ]
+}

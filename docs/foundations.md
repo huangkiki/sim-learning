@@ -2,6 +2,8 @@
 
 [回到首页](../README.md) · [学习路线](learning-paths.md)
 
+推荐先读[Physics-Based Simulation 的前四章及接触主线](physics-based-simulation.md)，再结合[Solver 教程](solver-guide/README.md)使用本页查概念。
+
 本页统一概念与记号，帮助你定位各仓章节。公式注明假设；字段顺序、坐标约定、默认数值和支持矩阵仍以所选引擎的固定源码为准。原生接口之间的差异正是课程要解释的内容。
 
 ## 1. 单位、坐标、姿态与参考点 · A1 / B0
@@ -64,23 +66,23 @@ $$I_O=I_C+m\big((r^Tr)\mathbf{1}-rr^T\big).$$
 
 | 引擎 | 动力学与数值迭代 | 材料与力观测 |
 |---|---|---|
-| MuJoCo | [流水线](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/dynamics-and-pipeline.md) · [求解与积分](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/solvers-and-integration.md) | [接触模型](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/contact-models.md) · [力观测](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/force-observations.md) |
-| SuperDex | [隐式积分与求解](https://github.com/huangkiki/superdex-atlas/blob/main/docs/contact-solvers-forces.md) | [接触、材料与 query](https://github.com/huangkiki/superdex-atlas/blob/main/docs/contact-solvers-forces.md) |
-| Genesis | [约束求解与积分](https://github.com/huangkiki/genesis-atlas/blob/main/docs/contact-solvers-forces.md) | [接触、材料与采样](https://github.com/huangkiki/genesis-atlas/blob/main/docs/contact-solvers-forces.md) |
-| Newton Physics | [XPBD 与后端分支](https://github.com/huangkiki/newton-atlas/blob/main/docs/contact-solvers-forces.md) | [材料、wrench 与读回缺项](https://github.com/huangkiki/newton-atlas/blob/main/docs/contact-solvers-forces.md) |
-| PhysX | [CPU PGS/TGS 与积分](https://github.com/huangkiki/physx-atlas/blob/main/docs/contact-solvers.md) | [材料、法向点与切向 anchor](https://github.com/huangkiki/physx-atlas/blob/main/docs/contact-solvers.md) |
-| Drake | [动力学装配与 SAP](https://github.com/huangkiki/drake-atlas/blob/main/docs/contact-solvers.md) | [几何材料](https://github.com/huangkiki/drake-atlas/blob/main/docs/contact-models.md) · [力与采样](https://github.com/huangkiki/drake-atlas/blob/main/docs/contact-observation.md) |
+| MuJoCo | [流水线](https://github.com/huangkiki/mujoco-learning/blob/main/docs/dynamics-and-pipeline.md) · [求解与积分](https://github.com/huangkiki/mujoco-learning/blob/main/docs/solvers-and-integration.md) | [接触模型](https://github.com/huangkiki/mujoco-learning/blob/main/docs/contact-models.md) · [力观测](https://github.com/huangkiki/mujoco-learning/blob/main/docs/force-observations.md) |
+| SuperDex | [隐式积分与求解](https://github.com/huangkiki/superdex-learning/blob/main/docs/contact-solvers-forces.md) | [接触、材料与 query](https://github.com/huangkiki/superdex-learning/blob/main/docs/contact-solvers-forces.md) |
+| Genesis | [约束求解与积分](https://github.com/huangkiki/genesis-learning/blob/main/docs/contact-solvers-forces.md) | [接触、材料与采样](https://github.com/huangkiki/genesis-learning/blob/main/docs/contact-solvers-forces.md) |
+| Newton Physics | [XPBD 与后端分支](https://github.com/huangkiki/newton-learning/blob/main/docs/contact-solvers-forces.md) | [材料、wrench 与读回缺项](https://github.com/huangkiki/newton-learning/blob/main/docs/contact-solvers-forces.md) |
+| PhysX | [CPU PGS/TGS 与积分](https://github.com/huangkiki/physx-learning/blob/main/docs/contact-solvers.md) | [材料、法向点与切向 anchor](https://github.com/huangkiki/physx-learning/blob/main/docs/contact-solvers.md) |
+| Drake | [动力学装配与 SAP](https://github.com/huangkiki/drake-learning/blob/main/docs/contact-solvers.md) | [几何材料](https://github.com/huangkiki/drake-learning/blob/main/docs/contact-models.md) · [力与采样](https://github.com/huangkiki/drake-learning/blob/main/docs/contact-observation.md) |
 
 六仓 E3 专题均已发布。以上链接用于对照原生机制，不能组成性能或物理准确性排名。
 
 六个引擎的传感、查询与图像专题均已展开：
 
-- **MuJoCo：**[传感与采样](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/sensors-and-sampling.md) → [相机与几何查询](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/cameras-and-geometry-queries.md) → [渲染与 viewer](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/rendering-and-viewer.md)。从输出块和采样阶段理解 history，再区分投影、射线、像素及窗口资源。
-- **SuperDex：**[传感器、渲染与可视化](https://github.com/huangkiki/superdex-atlas/blob/main/docs/sensors-rendering.md)。区分相机元数据、物理查询与图像宿主，追踪 RGBA、读回缓存和帧延迟。
-- **Genesis：**[传感器、渲染与可视化](https://github.com/huangkiki/genesis-atlas/blob/main/docs/sensors-rendering.md)。区分普通传感器与相机缓存，理解轴向深度、射线距离、分割映射及触觉感知模型。
-- **Newton Physics：**[传感、查询与渲染](https://github.com/huangkiki/newton-atlas/blob/main/docs/sensors-rendering.md)。追踪观测存储与加速度产生者，区分共享几何树、相机通道及 viewer 的数据生命周期。
-- **PhysX：**[传感、场景查询与调试显示](https://github.com/huangkiki/physx-atlas/blob/main/docs/sensors-rendering.md)。理解过滤、最近命中与多命中完整性，再区分力和加速度、调试图元以及宿主图像管线。
-- **Drake：**[相机与渲染](https://github.com/huangkiki/drake-atlas/blob/main/docs/sensors-rendering.md) → [采样与延迟](https://github.com/huangkiki/drake-atlas/blob/main/docs/sensor-timing.md) → [惯性与力传感](https://github.com/huangkiki/drake-atlas/blob/main/docs/inertial-force-sensing.md)。沿系统端口追踪图像、捕获位姿和时间，再核对动力学输入的采样阶段。
+- **MuJoCo：**[传感与采样](https://github.com/huangkiki/mujoco-learning/blob/main/docs/sensors-and-sampling.md) → [相机与几何查询](https://github.com/huangkiki/mujoco-learning/blob/main/docs/cameras-and-geometry-queries.md) → [渲染与 viewer](https://github.com/huangkiki/mujoco-learning/blob/main/docs/rendering-and-viewer.md)。从输出块和采样阶段理解 history，再区分投影、射线、像素及窗口资源。
+- **SuperDex：**[传感器、渲染与可视化](https://github.com/huangkiki/superdex-learning/blob/main/docs/sensors-rendering.md)。区分相机元数据、物理查询与图像宿主，追踪 RGBA、读回缓存和帧延迟。
+- **Genesis：**[传感器、渲染与可视化](https://github.com/huangkiki/genesis-learning/blob/main/docs/sensors-rendering.md)。区分普通传感器与相机缓存，理解轴向深度、射线距离、分割映射及触觉感知模型。
+- **Newton Physics：**[传感、查询与渲染](https://github.com/huangkiki/newton-learning/blob/main/docs/sensors-rendering.md)。追踪观测存储与加速度产生者，区分共享几何树、相机通道及 viewer 的数据生命周期。
+- **PhysX：**[传感、场景查询与调试显示](https://github.com/huangkiki/physx-learning/blob/main/docs/sensors-rendering.md)。理解过滤、最近命中与多命中完整性，再区分力和加速度、调试图元以及宿主图像管线。
+- **Drake：**[相机与渲染](https://github.com/huangkiki/drake-learning/blob/main/docs/sensors-rendering.md) → [采样与延迟](https://github.com/huangkiki/drake-learning/blob/main/docs/sensor-timing.md) → [惯性与力传感](https://github.com/huangkiki/drake-learning/blob/main/docs/inertial-force-sensing.md)。沿系统端口追踪图像、捕获位姿和时间，再核对动力学输入的采样阶段。
 
 阅读任务：为一项观测分别写下产生者、采样时间、坐标、单位、shape 和无效值，再解释为何一个 RGB 图像、接触力数组和当前关节状态可能并非同一时刻的观测。已有示例仅做源码与静态检查。
 
@@ -92,12 +94,12 @@ $$I_O=I_C+m\big((r^Tr)\mathbf{1}-rr^T\big).$$
 
 | 已发布专题 | 建议追踪的问题 |
 |---|---|
-| MuJoCo：[CPU 批量](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/cpu-batching.md) → [MJX 与设备](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/mjx-and-device-data.md) → [学习与随机化](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/learning-and-randomization.md) → [记录与回放](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/recording-and-replay.md) | 每个 worker 的 Data 怎样初始化？JAX/Warp 的状态和容量有何差异？state mask 没有保存什么？ |
-| SuperDex：[批量、学习与数据](https://github.com/huangkiki/superdex-atlas/blob/main/docs/batch-learning-data.md) | 两层 vector 如何传递 seed 和 reset？共享 Scene 的延迟读取属于哪个环境？诊断 JSON 能恢复状态吗？ |
-| Genesis：[批量、学习与数据](https://github.com/huangkiki/genesis-atlas/blob/main/docs/batch-learning-data.md) | 局部 reset 改变哪些时钟？官方 Go2 环境何时覆盖终态？记录器和轨迹回放分别拥有哪些数据？ |
-| Newton Physics：[批量、学习与数据](https://github.com/huangkiki/newton-atlas/blob/main/docs/batch-learning-data.md) | 多 world 如何分段和重置？策略循环的实际推进时间是什么？ViewerFile 保存了什么、没有保存什么？ |
-| PhysX：[批量、学习与数据](https://github.com/huangkiki/physx-atlas/blob/main/docs/batch-learning-data.md) | Scene 隔离与 Direct GPU 布局/事件怎样配合？重置应清哪些输入？序列化对象与 backing memory 由谁释放？ |
-| Drake：[环境生命周期](https://github.com/huangkiki/drake-atlas/blob/main/docs/batch-lifecycle.md) → [随机化与学习](https://github.com/huangkiki/drake-atlas/blob/main/docs/randomness-learning.md) → [日志与回放](https://github.com/huangkiki/drake-atlas/blob/main/docs/data-replay.md) | Context、Simulator 和外部资源怎样隔离？Python MonteCarlo 是否并行？logger 的时间和 trajectory 的有效域如何解释？ |
+| MuJoCo：[CPU 批量](https://github.com/huangkiki/mujoco-learning/blob/main/docs/cpu-batching.md) → [MJX 与设备](https://github.com/huangkiki/mujoco-learning/blob/main/docs/mjx-and-device-data.md) → [学习与随机化](https://github.com/huangkiki/mujoco-learning/blob/main/docs/learning-and-randomization.md) → [记录与回放](https://github.com/huangkiki/mujoco-learning/blob/main/docs/recording-and-replay.md) | 每个 worker 的 Data 怎样初始化？JAX/Warp 的状态和容量有何差异？state mask 没有保存什么？ |
+| SuperDex：[批量、学习与数据](https://github.com/huangkiki/superdex-learning/blob/main/docs/batch-learning-data.md) | 两层 vector 如何传递 seed 和 reset？共享 Scene 的延迟读取属于哪个环境？诊断 JSON 能恢复状态吗？ |
+| Genesis：[批量、学习与数据](https://github.com/huangkiki/genesis-learning/blob/main/docs/batch-learning-data.md) | 局部 reset 改变哪些时钟？官方 Go2 环境何时覆盖终态？记录器和轨迹回放分别拥有哪些数据？ |
+| Newton Physics：[批量、学习与数据](https://github.com/huangkiki/newton-learning/blob/main/docs/batch-learning-data.md) | 多 world 如何分段和重置？策略循环的实际推进时间是什么？ViewerFile 保存了什么、没有保存什么？ |
+| PhysX：[批量、学习与数据](https://github.com/huangkiki/physx-learning/blob/main/docs/batch-learning-data.md) | Scene 隔离与 Direct GPU 布局/事件怎样配合？重置应清哪些输入？序列化对象与 backing memory 由谁释放？ |
+| Drake：[环境生命周期](https://github.com/huangkiki/drake-learning/blob/main/docs/batch-lifecycle.md) → [随机化与学习](https://github.com/huangkiki/drake-learning/blob/main/docs/randomness-learning.md) → [日志与回放](https://github.com/huangkiki/drake-learning/blob/main/docs/data-replay.md) | Context、Simulator 和外部资源怎样隔离？Python MonteCarlo 是否并行？logger 的时间和 trajectory 的有效域如何解释？ |
 
 六仓批量、学习接口与数据专题均已发布。这些章节建立原生机制与数据契约，没有训练、性能测量或跨后端重现结果。
 
@@ -107,19 +109,19 @@ $$I_O=I_C+m\big((r^Tr)\mathbf{1}-rr^T\big).$$
 
 | 已发布专题 | 建议追踪的问题 |
 |---|---|
-| MuJoCo：[回调与插件](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/extensions-and-callbacks.md) · [flex 与弹性](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/flex-and-elasticity.md) · [IPC](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/ipc-contact-mode.md) · [后端与微分](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/backends-and-differentiation.md) · [流体与源码追踪](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/multiphysics-and-source-trace.md) | 插件状态由谁拥有？材料与接触模式有哪些编译限制？有限差分、JAX 与 Warp 的状态及反向边界有何差异？ |
-| SuperDex：[材料、扩展与可微](https://github.com/huangkiki/superdex-atlas/blob/main/docs/extensions-boundaries.md) | 壳、杆、ROM 的状态和量纲是什么？隐式伴随实际解什么方程？构建开关、绑定和接触反向如何限制可用组合？ |
-| Genesis：[多物理、可微与扩展](https://github.com/huangkiki/genesis-atlas/blob/main/docs/extensions-boundaries.md) | material 怎样选择 solver？哪些材料函数被显式、隐式或外部耦合器消费？窗口重算、传感器历史和缺失反向怎样影响能力判断？ |
-| Newton Physics：[求解、耦合与可微](https://github.com/huangkiki/newton-atlas/blob/main/docs/extensions-boundaries.md) | 同一材料在不同 solver 中如何离散？MPM 如何隔离与重置？耦合迭代及 Tape 需要保存哪些状态？ |
-| PhysX：[扩展与多物理](https://github.com/huangkiki/physx-atlas/blob/main/docs/extensions-boundaries.md) | 自定义几何和约束行由谁拥有？FEM 乘子与刚体冲量如何区分？GPU buffer、stream 和 event 有哪些同步责任？ |
-| Drake：[原生扩展](https://github.com/huangkiki/drake-atlas/blob/main/docs/systems-extensions.md) · [标量与可微](https://github.com/huangkiki/drake-atlas/blob/main/docs/scalar-capabilities.md) · [特色与综合追踪](https://github.com/huangkiki/drake-atlas/blob/main/docs/engine-boundaries.md) | System 转换后 Context 怎样建立？几何、SAP 与 FEM 各支持哪些标量？优化模型和仿真图有哪些不同前提？ |
+| MuJoCo：[回调与插件](https://github.com/huangkiki/mujoco-learning/blob/main/docs/extensions-and-callbacks.md) · [flex 与弹性](https://github.com/huangkiki/mujoco-learning/blob/main/docs/flex-and-elasticity.md) · [IPC](https://github.com/huangkiki/mujoco-learning/blob/main/docs/ipc-contact-mode.md) · [后端与微分](https://github.com/huangkiki/mujoco-learning/blob/main/docs/backends-and-differentiation.md) · [流体与源码追踪](https://github.com/huangkiki/mujoco-learning/blob/main/docs/multiphysics-and-source-trace.md) | 插件状态由谁拥有？材料与接触模式有哪些编译限制？有限差分、JAX 与 Warp 的状态及反向边界有何差异？ |
+| SuperDex：[材料、扩展与可微](https://github.com/huangkiki/superdex-learning/blob/main/docs/extensions-boundaries.md) | 壳、杆、ROM 的状态和量纲是什么？隐式伴随实际解什么方程？构建开关、绑定和接触反向如何限制可用组合？ |
+| Genesis：[多物理、可微与扩展](https://github.com/huangkiki/genesis-learning/blob/main/docs/extensions-boundaries.md) | material 怎样选择 solver？哪些材料函数被显式、隐式或外部耦合器消费？窗口重算、传感器历史和缺失反向怎样影响能力判断？ |
+| Newton Physics：[求解、耦合与可微](https://github.com/huangkiki/newton-learning/blob/main/docs/extensions-boundaries.md) | 同一材料在不同 solver 中如何离散？MPM 如何隔离与重置？耦合迭代及 Tape 需要保存哪些状态？ |
+| PhysX：[扩展与多物理](https://github.com/huangkiki/physx-learning/blob/main/docs/extensions-boundaries.md) | 自定义几何和约束行由谁拥有？FEM 乘子与刚体冲量如何区分？GPU buffer、stream 和 event 有哪些同步责任？ |
+| Drake：[原生扩展](https://github.com/huangkiki/drake-learning/blob/main/docs/systems-extensions.md) · [标量与可微](https://github.com/huangkiki/drake-learning/blob/main/docs/scalar-capabilities.md) · [特色与综合追踪](https://github.com/huangkiki/drake-learning/blob/main/docs/engine-boundaries.md) | System 转换后 Context 怎样建立？几何、SAP 与 FEM 各支持哪些标量？优化模型和仿真图有哪些不同前提？ |
 
-六仓扩展专题均已发布。开发计划已暂停，全路线安装与综合审校保留待办；最新状态见[交付进度](progress.md)。
+六仓扩展专题均已发布。新的先修路线与 Solver 教程正在推进；E7 全路线安装与综合审校继续暂停；最新状态见[交付进度](progress.md)。
 
 阅读任务：从所选引擎找出一个“有入口但存在使用条件”的例子，分别写出源码版本、消费者、有效组合、状态所有者及未验证项。以上章节仅做源码与静态验证，没有进行梯度实验或物理资格测试。
 
 ## 到各引擎继续
 
-[MuJoCo 课程](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/curriculum.md) · [SuperDex 课程](https://github.com/huangkiki/superdex-atlas/blob/main/docs/curriculum.md) · [Genesis 课程](https://github.com/huangkiki/genesis-atlas/blob/main/docs/curriculum.md) · [Newton 课程](https://github.com/huangkiki/newton-atlas/blob/main/docs/curriculum.md) · [PhysX 课程](https://github.com/huangkiki/physx-atlas/blob/main/docs/curriculum.md) · [Drake 课程](https://github.com/huangkiki/drake-atlas/blob/main/docs/curriculum.md)
+[MuJoCo 课程](https://github.com/huangkiki/mujoco-learning/blob/main/docs/curriculum.md) · [SuperDex 课程](https://github.com/huangkiki/superdex-learning/blob/main/docs/curriculum.md) · [Genesis 课程](https://github.com/huangkiki/genesis-learning/blob/main/docs/curriculum.md) · [Newton 课程](https://github.com/huangkiki/newton-learning/blob/main/docs/curriculum.md) · [PhysX 课程](https://github.com/huangkiki/physx-learning/blob/main/docs/curriculum.md) · [Drake 课程](https://github.com/huangkiki/drake-learning/blob/main/docs/curriculum.md)
 
 对照阅读时保留引擎差异，分别记录接口、源码与实验证据。各课程目录中的待开发项仍是待开发项，本页的概念地图不替代它们。
