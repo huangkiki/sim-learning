@@ -2,9 +2,9 @@
 
 [教程目录](README.md) · [仿真一步](01-simulation-step.md) · [版本与来源](source-versions.md)
 
-**先修：**矩阵乘法、导数与[仿真一步](01-simulation-step.md)。**读完目标：**区分非线性问题、线性子问题、内外层容差，以及同名 CG 在不同引擎中的角色。
+**先修：** 矩阵乘法、导数与[仿真一步](01-simulation-step.md)。**读完目标：** 区分非线性问题、线性子问题、内外层容差，以及同名 CG 在不同引擎中的角色。
 
-**教材衔接：**先读 [Physics-Based Simulation 第 3 章及第 37 章](../physics-based-simulation.md)，再比较本章的外层/内层与引擎特有分支。
+**教材衔接：** 先读 [Physics-Based Simulation 第 3 章及第 37 章](../physics-based-simulation.md)，再比较本章的外层/内层与引擎特有分支。
 
 ## 先确定“正在解什么”
 
@@ -45,7 +45,7 @@ flowchart TD
 
 MuJoCo 配置表中的 CG 是非线性约束优化方法；SuperDex 表中的 CG 是线性子求解选项。它们不能以“都叫 CG”为理由放在一列做纯算法归因。MuJoCo 的具体变量、目标和方向更新见[固定求解器源码](https://github.com/google-deepmind/mujoco/blob/9ea3cdfcae93bf2cc4dc0e1a1627c5a39a1e06e5/src/engine/engine_solver.c#L2828-L2935)，SuperDex 的字段和分派见[原生专题](https://github.com/huangkiki/superdex-learning/blob/main/docs/contact-solvers-forces.md)。
 
-<details><summary>进阶算例：用线性 CG 看清“一轮”</summary>
+### 进阶算例：用线性 CG 看清“一轮”
 
 令 $`A=\operatorname{diag}(4,1)`$、$`b=(1,2)^T`$、$`x_0=0`$，无预条件，精确算术。真解为 $`(1/4,2)^T`$。第一轮 $`r_0=p_0=b`$，
 
@@ -57,8 +57,6 @@ x_1=(5/8,5/4)^T,\quad r_1=(-3/2,3/4)^T.
 再取 $`\beta_0=(r_1^Tr_1)/(r_0^Tr_0)=9/16`$，$`p_1=r_1+\beta_0p_0=(-15/16,15/8)^T`$，$`\alpha_1=2/5`$，得到 $`x_2=(1/4,2)^T`$。
 
 这展示两个共轭方向如何在精确算术的二维 SPD 问题中找到解。有限精度、条件数和预条件器会影响实际行为；不能据此承诺引擎中“自由度数次迭代必收敛”。推导背景参见 [Shewchuk 的 CG 教程](https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf)。
-
-</details>
 
 ## 怎样理解外层方法与线性方法
 
@@ -89,7 +87,7 @@ SuperDex 的 `SolverParams.non_linear_solver` 与 `linear_solver` 属于不同�
 
 ## 练习与答案
 
-**配置题：**`Newton / CUDA_GMRES / FP64` 是三种 solver 吗？
+**配置题：** `Newton / CUDA_GMRES / FP64` 是三种 solver 吗？
 
 <details><summary>答案</summary>
 
@@ -97,7 +95,7 @@ SuperDex 的 `SolverParams.non_linear_solver` 与 `linear_solver` 属于不同�
 
 </details>
 
-**数学题：**内层把 $`A\Delta z=-R`$ 解到很小残差，外层为什么仍可能不收敛？
+**数学题：** 内层把 $`A\Delta z=-R`$ 解到很小残差，外层为什么仍可能不收敛？
 
 <details><summary>答案</summary>
 
@@ -105,7 +103,7 @@ SuperDex 的 `SolverParams.non_linear_solver` 与 `linear_solver` 属于不同�
 
 </details>
 
-**诊断题：**两个引擎都设置 iterations=100，能认为计算预算对齐吗？
+**诊断题：** 两个引擎都设置 iterations=100，能认为计算预算对齐吗？
 
 <details><summary>答案</summary>
 
