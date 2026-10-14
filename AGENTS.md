@@ -1,6 +1,7 @@
-# Sim Atlas hub maintenance
+# Sim Learning hub maintenance
 
 - Use autodev for repository development and recover current work before creating duplicate issues or branches.
+- Recover the current scope from [docs/current-work.md](docs/current-work.md); its Learning/solver work does not resume the deferred E7 runs.
 - This repository owns the learning homepage, shared vocabulary and reading routes. Engine-specific implementation lessons remain in their six repositories; experiments and evidence remain in DexLab.
 - The user requested one worker per engine with a supervising main agent. Respect available concurrency, keep one writer per repository, and report actual active/queued status.
 - The supervisor reviews each delivered slice against its issue and pinned source, verifies the published commit and applicable CI, then reassesses dependencies and dispatches the next task.

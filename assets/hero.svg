@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-labelledby="title desc">
-  <title id="title">Sim Atlas · 仿真图谱</title>
+  <title id="title">Sim Learning · 仿真学习</title>
   <desc id="desc">Six engines, two learning tracks. Native APIs, physics and source code.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -14,8 +14,8 @@
   <rect x="650" width="630" height="340" rx="18" fill="url(#grid)"/>
   <g font-family="Arial, 'Noto Sans CJK SC', sans-serif">
     <text x="55" y="50" font-size="13" letter-spacing="3" fill="#71d5ca">OPEN LEARNING SERIES</text>
-    <text x="50" y="148" font-size="88" font-weight="700" letter-spacing="-4" fill="#f1f7f5">SIM ATLAS</text>
-    <text x="55" y="207" font-size="34" font-weight="500" fill="#f1f7f5">仿真图谱</text>
+    <text x="50" y="148" font-size="72" font-weight="700" letter-spacing="-3" fill="#f1f7f5">SIM LEARNING</text>
+    <text x="55" y="207" font-size="34" font-weight="500" fill="#f1f7f5">仿真学习</text>
     <text x="55" y="250" font-size="21" fill="#aac8cd">原生接口 · 物理机制 · 源码实现</text>
     <path d="M55 281H112" stroke="#e9b76b" stroke-width="3"/>
     <text x="131" y="288" font-size="14" letter-spacing="2" fill="#c4d9dc">6 ENGINES / 2 TRACKS</text>

@@ -7,3 +7,5 @@
 教学组织参考 [Albusgive/mujoco_learning](https://github.com/Albusgive/mujoco_learning) 的章节式学习方式，没有复制其代码、图片或正文。
 
 实验案例引用 [DexLab](https://github.com/huangkiki/Dexlab)，保留原有报告的作者、版本、协议、失败记录与覆盖边界。
+
+先修学习采用 [Physics-Based Simulation](https://phys-sim-book.github.io/)，由 Chenfanfu Jiang、Minchen Li 等人合著，完整作者名单在原书前言。本仓提供独立的[学习路线与原创自测](docs/physics-based-simulation.md)，引用的原书正文、图像和上游材料保留 [CC BY-NC-SA 4.0](https://github.com/phys-sim-book/mdbook-src/blob/18c637eb6a7016814ac2a04e98798be0ed9b82b1/LICENSE) 及其归属，不归入本仓 Apache-2.0。章节映射及核对范围见[来源记录](docs/physics-based-simulation-sources.json)。

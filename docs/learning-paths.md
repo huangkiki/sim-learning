@@ -2,7 +2,7 @@
 
 [回到首页](../README.md) · [共同基础](foundations.md) · [实验案例](dexlab.md)
 
-选定一个引擎后，在它的课程目录中按下列单元阅读。应用路线侧重建立正确的使用习惯；原理路线侧重解释输入、方程、实现和输出之间的关系。课程是学习地图，各仓目录才是具体章节及完成状态的来源。
+先沿[Physics-Based Simulation 伴读路线](physics-based-simulation.md)建立共同基础，再用[Solver 教程](solver-guide/README.md)练习配置解读。选定一个引擎后，在它的课程目录中按下列单元阅读。应用路线侧重建立正确的使用习惯；原理路线侧重解释输入、方程、实现和输出之间的关系。课程是学习地图，各仓目录才是具体章节及完成状态的来源。
 
 ## 应用路线 A
 
@@ -40,14 +40,14 @@ A0–A2 是使用基础；A3–A5 建立机器人与接触接口；A6–A9 组�
 
 | 引擎 | 双路线目录 | 固定版本与源码入口 |
 |---|---|---|
-| MuJoCo | [课程](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/source-map.md) |
-| SuperDex | [课程](https://github.com/huangkiki/superdex-atlas/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/superdex-atlas/blob/main/docs/source-map.md) |
-| Genesis | [课程](https://github.com/huangkiki/genesis-atlas/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/genesis-atlas/blob/main/docs/source-map.md) |
-| Newton Physics | [课程](https://github.com/huangkiki/newton-atlas/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/newton-atlas/blob/main/docs/source-map.md) |
-| PhysX | [课程](https://github.com/huangkiki/physx-atlas/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/physx-atlas/blob/main/docs/source-map.md) |
-| Drake | [课程](https://github.com/huangkiki/drake-atlas/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/drake-atlas/blob/main/docs/source-map.md) |
+| MuJoCo | [课程](https://github.com/huangkiki/mujoco-learning/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/mujoco-learning/blob/main/docs/source-map.md) |
+| SuperDex | [课程](https://github.com/huangkiki/superdex-learning/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/superdex-learning/blob/main/docs/source-map.md) |
+| Genesis | [课程](https://github.com/huangkiki/genesis-learning/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/genesis-learning/blob/main/docs/source-map.md) |
+| Newton Physics | [课程](https://github.com/huangkiki/newton-learning/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/newton-learning/blob/main/docs/source-map.md) |
+| PhysX | [课程](https://github.com/huangkiki/physx-learning/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/physx-learning/blob/main/docs/source-map.md) |
+| Drake | [课程](https://github.com/huangkiki/drake-learning/blob/main/docs/curriculum.md) | [源码地图](https://github.com/huangkiki/drake-learning/blob/main/docs/source-map.md) |
 
-每个课程单元使用本引擎的 API、数据结构和限制；本系列不要求安装其他 Atlas 仓库，也没有跨引擎运行封装。
+每个课程单元使用本引擎的 API、数据结构和限制；本系列不要求安装其他 Learning 仓库，也没有跨引擎运行封装。
 
 ## 课程单元与开发阶段怎样对应？
 

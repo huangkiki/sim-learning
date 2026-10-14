@@ -1,18 +1,22 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="Sim Atlas 仿真图谱：六个引擎，两条路线，从原生接口走向物理与源码" width="100%">
+<img src="assets/hero.svg" alt="Sim Learning 仿真学习：六个引擎，两条路线，从原生接口走向物理与源码" width="100%">
 
 **学会使用仿真器，也能解释它为什么这样工作。**
 
-[English](README.en.md) · [选择学习路线](docs/learning-paths.md) · [共同基础](docs/foundations.md) · [开发看板](https://github.com/users/huangkiki/projects/2) · [实验案例](docs/dexlab.md)
+[English](README.en.md) · [先学 Physics-Based Simulation](docs/physics-based-simulation.md) · [Solver 教程](docs/solver-guide/README.md) · [选择学习路线](docs/learning-paths.md) · [共同基础](docs/foundations.md) · [开发看板](https://github.com/users/huangkiki/projects/2) · [实验案例](docs/dexlab.md)
 
 </div>
 
-Sim Atlas · 仿真图谱是一套独立社区课程，覆盖 **MuJoCo、SuperDex、Genesis、Newton Physics、PhysX、Drake**。每个引擎有自己的学习仓库，沿原生 API 理解模型、状态、控制和观测，再进入动力学、接触、求解器与源码。
+Sim Learning · 仿真学习是一套独立社区课程，覆盖 **MuJoCo、SuperDex、Genesis、Newton Physics、PhysX、Drake**。每个引擎有自己的学习仓库，沿原生 API 理解模型、状态、控制和观测，再进入动力学、接触、求解器与源码。
 
 这里组织阅读顺序；各引擎仓库维护详细课程；[GitHub Projects](https://github.com/users/huangkiki/projects/2) 管理任务；[DexLab](https://github.com/huangkiki/Dexlab) 保存实验协议、案例与证据。
 
-## 你想从哪里开始？
+## 先建立物理仿真基础
+
+推荐先沿 Chenfanfu Jiang、Minchen Li 等人合著的 [Physics-Based Simulation](https://phys-sim-book.github.io/) 学习：**离散时空 → 优化与 Newton → 质点弹簧 → 接触和摩擦 → 六引擎原生实现**。本仓提供[中文伴读路线与自测](docs/physics-based-simulation.md)，再用 [Solver 教程](docs/solver-guide/README.md)把原理对应到配置和诊断。已有物理仿真基础的读者可以按需回查。
+
+## 选择引擎后的两条路线
 
 | **A · 使用仿真器** | **B · 理解物理与源码** |
 |---|---|
@@ -29,14 +33,14 @@ Sim Atlas · 仿真图谱是一套独立社区课程，覆盖 **MuJoCo、SuperDe
 
 | 引擎 | 原生学习重点 | 课程入口 |
 |---|---|---|
-| **[MuJoCo](https://github.com/huangkiki/mujoco-atlas)** | MJCF、`mjSpec/mjModel/mjData`、驱动器、约束与积分流水线 | [完整目录](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/curriculum.md) · [回调与插件](https://github.com/huangkiki/mujoco-atlas/blob/main/docs/extensions-and-callbacks.md) |
-| **[SuperDex](https://github.com/huangkiki/superdex-atlas)** | Physics / Robotics 的分工、Scene / Actor、接触几何与隐式求解 | [完整目录](https://github.com/huangkiki/superdex-atlas/blob/main/docs/curriculum.md) · [材料与可微](https://github.com/huangkiki/superdex-atlas/blob/main/docs/extensions-boundaries.md) |
-| **[Genesis](https://github.com/huangkiki/genesis-atlas)** | Scene / Entity、多物理求解器、批量状态、控制与可微边界 | [完整目录](https://github.com/huangkiki/genesis-atlas/blob/main/docs/curriculum.md) · [多物理与可微](https://github.com/huangkiki/genesis-atlas/blob/main/docs/extensions-boundaries.md) |
-| **[Newton Physics](https://github.com/huangkiki/newton-atlas)** | ModelBuilder / State / Control、Warp 数组、不同 Solver 的能力边界 | [完整目录](https://github.com/huangkiki/newton-atlas/blob/main/docs/curriculum.md) · [求解、耦合与可微](https://github.com/huangkiki/newton-atlas/blob/main/docs/extensions-boundaries.md) |
-| **[PhysX](https://github.com/huangkiki/physx-atlas)** | C++ SDK、Scene / Actor / Shape、articulation、PGS / TGS 与宿主接入 | [完整目录](https://github.com/huangkiki/physx-atlas/blob/main/docs/curriculum.md) · [扩展与多物理](https://github.com/huangkiki/physx-atlas/blob/main/docs/extensions-boundaries.md) |
-| **[Drake](https://github.com/huangkiki/drake-atlas)** | Systems / Diagram / Context、MultibodyPlant、SceneGraph、接触与优化 | [完整目录](https://github.com/huangkiki/drake-atlas/blob/main/docs/curriculum.md) · [扩展与标量转换](https://github.com/huangkiki/drake-atlas/blob/main/docs/systems-extensions.md) |
+| **[MuJoCo](https://github.com/huangkiki/mujoco-learning)** | MJCF、`mjSpec/mjModel/mjData`、驱动器、约束与积分流水线 | [完整目录](https://github.com/huangkiki/mujoco-learning/blob/main/docs/curriculum.md) · [回调与插件](https://github.com/huangkiki/mujoco-learning/blob/main/docs/extensions-and-callbacks.md) |
+| **[SuperDex](https://github.com/huangkiki/superdex-learning)** | Physics / Robotics 的分工、Scene / Actor、接触几何与隐式求解 | [完整目录](https://github.com/huangkiki/superdex-learning/blob/main/docs/curriculum.md) · [材料与可微](https://github.com/huangkiki/superdex-learning/blob/main/docs/extensions-boundaries.md) |
+| **[Genesis](https://github.com/huangkiki/genesis-learning)** | Scene / Entity、多物理求解器、批量状态、控制与可微边界 | [完整目录](https://github.com/huangkiki/genesis-learning/blob/main/docs/curriculum.md) · [多物理与可微](https://github.com/huangkiki/genesis-learning/blob/main/docs/extensions-boundaries.md) |
+| **[Newton Physics](https://github.com/huangkiki/newton-learning)** | ModelBuilder / State / Control、Warp 数组、不同 Solver 的能力边界 | [完整目录](https://github.com/huangkiki/newton-learning/blob/main/docs/curriculum.md) · [求解、耦合与可微](https://github.com/huangkiki/newton-learning/blob/main/docs/extensions-boundaries.md) |
+| **[PhysX](https://github.com/huangkiki/physx-learning)** | C++ SDK、Scene / Actor / Shape、articulation、PGS / TGS 与宿主接入 | [完整目录](https://github.com/huangkiki/physx-learning/blob/main/docs/curriculum.md) · [扩展与多物理](https://github.com/huangkiki/physx-learning/blob/main/docs/extensions-boundaries.md) |
+| **[Drake](https://github.com/huangkiki/drake-learning)** | Systems / Diagram / Context、MultibodyPlant、SceneGraph、接触与优化 | [完整目录](https://github.com/huangkiki/drake-learning/blob/main/docs/curriculum.md) · [扩展与标量转换](https://github.com/huangkiki/drake-learning/blob/main/docs/systems-extensions.md) |
 
-六个引擎均已发布建模与状态、驱动与机器人、接触与求解、传感与渲染，以及批量、学习接口与数据课程。六仓也已提供特色扩展、多物理与可微边界专题。各课程记录固定版本、官方源码和阅读状态。**开发计划现已暂停**；完整安装课程与全路线审校保留待办，待明确恢复后继续。[查看交付进度](docs/progress.md)。
+六个引擎均已发布建模与状态、驱动与机器人、接触与求解、传感与渲染，以及批量、学习接口与数据课程。六仓也已提供特色扩展、多物理与可微边界专题。各课程记录固定版本、官方源码和阅读状态。**Learning 改名、先修阅读路线与 Solver 教程正在推进**；E7 完整安装课程与全路线审校继续暂停，保留独立待办。[当前工作范围](docs/current-work.md)。[查看交付进度](docs/progress.md)。
 
 ## 建立共同基础
 
