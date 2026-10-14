@@ -15,16 +15,16 @@
 | 单元 | 你将学会什么 | 当前入口 |
 |---|---|---|
 | 1. 仿真一步 | 将动作、驱动力、接触、求解、积分与观测分开 | [完整样章](01-simulation-step.md) |
-| 2. 接触如何产生响应 | 区分几何、接触模型、离散近似与参数 | 计划中；先读[基础第 5 节](../foundations.md#5-接触模型与数值近似--a4--b2--b3) |
-| 3. 摩擦为什么不只是一个系数 | 理解摩擦锥、patch 与正则化 | 计划中；原生深入入口见基础地图 |
-| 4. 约束问题怎样求解 | 解释 PGS、TGS、非线性 CG、Newton、SAP 的角色 | 计划中；先用第 5 单元辨别求解层级 |
+| 2. 接触如何产生响应 | 区分几何、接触模型、离散近似与参数 | [接触与响应](02-contact.md) |
+| 3. 摩擦为什么不只是一个系数 | 理解摩擦锥、patch 与正则化 | [摩擦与正则化](03-friction.md) |
+| 4. 约束问题怎样求解 | 解释 PGS、TGS、非线性 CG、Newton、SAP 的角色 | [约束求解](04-constraints.md) |
 | 5. 外层与内层 | 解释 Newton/BFGS/SR1、线性 CG/GMRES/分解与 AUTO | [完整样章](05-nonlinear-and-linear.md) |
-| 6. 时间与预算 | 区分步长、子步、迭代、容差和更新选项 | 计划中；第 1 单元先建立时间概念 |
-| 7. 刚体、布料与软体 | 区分动力学算法、变形体方法与耦合 | 计划中 |
-| 8. 后端、精度与身份 | 区分 CUDA/并行实现、FP64 和运行路径 | 计划中 |
-| 9. 六引擎逐行解读 | 把全部登记名称对应到原生接口与证据 | 计划中；先读[版本与来源](source-versions.md) |
+| 6. 时间与预算 | 区分步长、子步、迭代、容差和更新选项 | [时间与预算](06-time-and-budget.md) |
+| 7. 刚体、布料与软体 | 区分动力学算法、变形体方法与耦合 | [对象与实现](07-representations.md) |
+| 8. 后端、精度与身份 | 区分 CUDA/并行实现、FP64 和运行路径 | [后端与身份](08-backends-and-identity.md) |
+| 9. 六引擎逐行解读 | 把全部登记名称对应到原生接口与证据 | [六引擎配置卡](09-engine-configurations.md) · [术语索引](term-index.md) |
 
-完成教材第一轮伴读后，读本教程 1 → 5，建立整张配置表的层级；其余单元在样章审校后展开。完整课程和单章剧情原型仍在开发，已有深入课程可从[六引擎目录](../learning-paths.md)访问。
+完成教材第一轮伴读后，可先读 1 → 5 建立层级，再按 2 → 3 → 4 → 6 → 7 → 8 → 9 展开。九单元文字稿已齐；[术语索引](term-index.md)覆盖冻结词表全部 63 个 token 和表中五项身份/资格说明。当前 PR、跨仓集成和单章剧情原型仍有待办，见[验收范围](../learning-migration-acceptance.md)。已有深入课程可从[六引擎目录](../learning-paths.md)访问。
 
 ## 每章如何使用
 
@@ -36,4 +36,4 @@
 
 ## English reading guide
 
-For engineers and graduate researchers familiar with VLA, WAM or RL, this course explains how to interpret simulation configurations and diagnose failures from evidence. Begin with the [Physics-Based Simulation study route](../physics-based-simulation.md#english-reading-guide), then read [a simulation step](01-simulation-step.md), then [outer nonlinear and inner linear solving](05-nonlinear-and-linear.md). The remaining seven units and one narrative teaching prototype are in development. Full lessons are Chinese, with English terminology and summaries. Source review and static checks do not establish native execution or physical qualification.
+For engineers and graduate researchers familiar with VLA, WAM or RL, this course explains how to interpret simulation configurations and diagnose failures from evidence. Begin with the [Physics-Based Simulation study route](../physics-based-simulation.md#english-reading-guide), then read [a simulation step](01-simulation-step.md), then [outer nonlinear and inner linear solving](05-nonlinear-and-linear.md). All nine text lessons and a complete frozen-term index are present in this branch; publication, cross-repository integration and the narrative prototype have separate remaining acceptance. Full lessons are Chinese, with English terminology and summaries. Source review and static checks do not establish native execution or physical qualification.

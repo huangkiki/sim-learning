@@ -1,4 +1,4 @@
-# Learning 迁移、教材先修与样章：验收范围
+# Learning 迁移、教材先修与九单元教程：验收范围
 
 [当前工作](current-work.md) · [迁移任务 #1](https://github.com/huangkiki/sim-learning/issues/1) · [样章任务 #2](https://github.com/huangkiki/sim-learning/issues/2)
 
@@ -22,12 +22,22 @@
 3. 用有理数运算复算二维 CG 教学例子：两步得到 `(1/4, 2)`，线性残差为零；这是纸面数值验证，没有执行原生引擎。
 4. 浏览器检查改名后的 SVG：1280×340 图中标题和六个标签无重叠或裁切。开发计划桌面首屏也完成目视检查；这不是六引擎运行界面验收。
 
+## 九单元文字稿的续作验收
+
+先对两篇样章完成来源、公式和教学结构审校，沿用“问题 → 直觉/最小公式 → 配置与诊断 → 练习答案 → 英文摘要/来源”的标准补齐七章。剧情原型的未决交互不阻塞可独立审校的文字章节。
+
+- [全部术语索引](solver-guide/term-index.md)按冻结词表逐项核对 63 个 token；Newton 的一个别名合并后为 62 个展示项，另解释五项身份/资格标签。计数不代表独立算法或已运行配置。
+- 新章节引用六仓本批固定提交，原生导读继续链接已核对的官方源码。跨仓 main 入口仍需按 PR 合入顺序验收。
+- 根任务自审全部新增章节；AI 分工只读复核 Drake 接触/SAP、PhysX PGS/TGS/patch/时间与 Newton 实现/XPBD 量纲等相关部分。没有将这次分工复核写成外部维护者批准。
+- 新的标量算例按精确分数或基础算术复算；没有运行引擎。仓内链接、差异和词表映射检查绑定本批实际提交；远端 CI 单独报告。
+- [引用迁移记录](learning-migration.md)保留扫描范围、历史例外与未完成集成。
+
 ## 仍需独立完成
 
-其余七个教程单元、术语覆盖索引、单章剧情原型、DexLab 生成源衔接和跨仓最终发布仍由相应 Issue 跟踪。故事风格与交互两项仍待维护者答复。新增跨仓页面在对应 PR 合入后检查默认分支入口；不使用 HTTP 重定向替代内容验收。
+九单元文字稿及术语索引已在本分支补齐；单章剧情原型、DexLab 入口最终交付和跨仓合入仍由相应 Issue 跟踪。故事风格与交互两项仍待维护者答复。新增跨仓页面在对应 PR 合入后检查默认分支入口；不使用 HTTP 重定向替代内容验收。
 
 本轮没有安装、import、JIT、原生步进、渲染、训练或性能基准。原生运行与 E7 的恢复仍需后续明确安排。过去的验证记录、模型标识和实验身份不因改名重写。
 
 ## English summary
 
-This slice migrates current navigation to Learning and adds a book-led prerequisite route plus two solver-teaching pilot lessons. Source identity, chapter order, links, a rational-arithmetic example and the renamed hero graphic have distinct checks. Publication depends on the actual PR head and applicable CI. Seven remaining units, the narrative prototype and final cross-repository integration are not completed by this slice; native execution and E7 remain deferred.
+This slice migrates current navigation to Learning and adds a book-led prerequisite route plus two solver-teaching pilot lessons. Source identity, chapter order, links, a rational-arithmetic example and the renamed hero graphic have distinct checks. Publication depends on the actual PR head and applicable CI. All nine text units and the frozen-term index are now included. The narrative prototype and final cross-repository integration remain open; native execution and E7 remain deferred.

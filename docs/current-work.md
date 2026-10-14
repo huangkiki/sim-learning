@@ -10,7 +10,7 @@
 
 1. [八仓改名和引用迁移 #1](https://github.com/huangkiki/sim-learning/issues/1)：统一使用 Learning，保留原仓身份与历史证据，逐仓检查现行引用。
 2. 先完成[教材伴读路线](physics-based-simulation.md)，再交付[两篇教学样章 #2](https://github.com/huangkiki/sim-learning/issues/2)：仿真一步、外层与内层求解。正文直觉和最小公式，进阶补充推导与固定源码。
-3. [完整九单元与术语覆盖 #3](https://github.com/huangkiki/sim-learning/issues/3)：样章审校后逐章交付，覆盖 DexLab 已登记版本和名称。
+3. [完整九单元与术语覆盖 #3](https://github.com/huangkiki/sim-learning/issues/3)：样章审校后已补齐九单元文字稿和全部登记术语索引；当前推进审校、PR 与跨仓集成，覆盖 DexLab 已登记版本和名称。
 4. [单章 Galgame 原型 #4](https://github.com/huangkiki/sim-learning/issues/4)：先在一篇样章验证形式，再决定是否扩展。故事风格和交互能力两项仍待答，依赖它们的实现暂缓，其他工作继续。
 5. [DexLab 双向衔接 #5](https://github.com/huangkiki/sim-learning/issues/5)与[总体验收 #6](https://github.com/huangkiki/sim-learning/issues/6)：修改展示生成源，核对真实入口及当前提交。
 

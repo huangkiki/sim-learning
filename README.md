@@ -16,6 +16,8 @@ Sim Learning · 仿真学习是一套独立社区课程，覆盖 **MuJoCo、Supe
 
 推荐先沿 Chenfanfu Jiang、Minchen Li 等人合著的 [Physics-Based Simulation](https://phys-sim-book.github.io/) 学习：**离散时空 → 优化与 Newton → 质点弹簧 → 接触和摩擦 → 六引擎原生实现**。本仓提供[中文伴读路线与自测](docs/physics-based-simulation.md)，再用 [Solver 教程](docs/solver-guide/README.md)把原理对应到配置和诊断。已有物理仿真基础的读者可以按需回查。
 
+本批分支已包含[九单元中文教程](docs/solver-guide/README.md)和[全部登记术语索引](docs/solver-guide/term-index.md)，每章配英文摘要及带答案练习。[迁移与验收](docs/learning-migration-acceptance.md)区分可阅读内容、待合入 PR 与后续原生运行。
+
 ## 选择引擎后的两条路线
 
 | **A · 使用仿真器** | **B · 理解物理与源码** |

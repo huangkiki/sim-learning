@@ -14,6 +14,8 @@ Sim Learning is an independent community learning series for **MuJoCo, SuperDex,
 
 Begin with [Physics-Based Simulation](https://phys-sim-book.github.io/), coauthored by Chenfanfu Jiang, Minchen Li and colleagues. Read discrete space/time, optimization and Newton, mass-spring implementation, then contact and friction before comparing engine configurations. Our [Chinese study route and original checkpoints](docs/physics-based-simulation.md#english-reading-guide) connect the book to the [solver guide](docs/solver-guide/README.md) and native engine lessons.
 
+This branch contains [nine Chinese text lessons](docs/solver-guide/README.md), English summaries, answered exercises and a [complete frozen-term index](docs/solver-guide/term-index.md). [Acceptance](docs/learning-migration-acceptance.md) distinguishes readable content, pending integration and deferred native execution.
+
 ## Choose a track
 
 | Applications · A0–A9 | Physics and source · B0–B7 |
